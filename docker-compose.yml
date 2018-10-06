@@ -1,0 +1,12 @@
+version: "3.5"
+
+services:
+    client:
+        build:
+            context: node
+            dockerfile: Dockerfile
+        volumes:
+            - ./node:/node:cached
+        command: yarn run client
+        ports:
+            - 3000:3000
